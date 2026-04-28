@@ -174,9 +174,11 @@
 
                     if (region) {
                         formContainer.innerHTML = `
-                            <!--<p>We detected you're in <strong>${region.name}</strong>. Please fill out the form below:</p>-->
-                            <iframe src="${region.formUrl}"></iframe>
+                            <h2>Location Verified!</h2>
+                            <p>Taking you to the voting form...</p>
                         `;
+                        
+                        window.location.href = region.formUrl;
                     } else {
                         formContainer.innerHTML = `
                             <p>Sorry, you don't seem to be at Demo Day. Please reload the page from within the event venue.</p>
